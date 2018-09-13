@@ -21,10 +21,10 @@ export const loadMyFiction = (auth) => {
 					body: `user_id=${auth.user.id}`
 				}
 
-				const hostAPI = (process.env.api_host) ? process.env.url_api:API
+				//const hostAPI = (process.env.api_host) ? process.env.url_api:API
 
 
-				const json = await fetch(`${hostAPI}/api/writing/fetch_mywriting`,headerOpt )
+				const json = await fetch(`${API}/api/writing/fetch_mywriting`,headerOpt )
 				const res = await json.json()
 
 				//console.log('res',res)
